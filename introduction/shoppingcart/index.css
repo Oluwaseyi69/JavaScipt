@@ -1,0 +1,22 @@
+body{
+  background-color: yellow;
+  margin-left: 15px;
+}
+
+table, button{
+  text-align: left;
+}
+
+button{
+  cursor: pointer;
+  border: 1px solid;
+}
+
+input {
+  width: 55px;
+}
+
+input::-webkit-inner-spin-button,
+input::-webkit-outer-spin-button{
+  -webkit-appearance: none;
+}
