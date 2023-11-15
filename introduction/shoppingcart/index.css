@@ -3,20 +3,27 @@ body{
   margin-left: 30px;
 }
 
-table, button{
+table {
   text-align: left;
   text-transform: capitalize;
 
 }
-/* 
 button{
-  text-align: capitalize;
+  text-align: left;
+  text-transform: capitalize;
+  background: yellow;
+  text-size-adjust: 20px;
+  margin-top: 5px;
   cursor: pointer;
   border: 2px solid;
-} */
+  height: 20px;
+  
+}
 
 input {
-  width: 35px;
+  max-width: 50px;
+  height: 10px;
+
 }
 
 .trr {
@@ -26,16 +33,11 @@ input {
   align-self: left;
 }
 
-
-th {
-}
-
 tr {
   gap: 300px;
   margin-left: 300px;
 
 }
-
 
 input::-webkit-inner-spin-button,
 input::-webkit-outer-spin-button{

@@ -23,10 +23,12 @@ function addToCart(){
     let {newRow, shoppingCart, newItem, itemPrice, removeButton} = createRowElements();
     newItem.innerText = item.value;
     itemPrice.innerText = price.value;
+    removeButton.innerText = "Remove";
+    removeButton.className = "remove";
 
     newRow.appendChild(newItem);
     newRow.appendChild(itemPrice);
-    // newRow.appendChild(removeButton);
+     newRow.appendChild(removeButton);
     shoppingCart.appendChild(newRow);
 
     item.value = "";
@@ -36,8 +38,8 @@ function addToCart(){
 }
 
 function removeFromCart(){
-  const shoppingCart = document.getElementsByTagName("tbody")[0];
-  const rows = shoppingCart.getElementsByTagName("tr");
+  let shoppingCart = document.getElementsByTagName("tbody")[0];
+  let rows = shoppingCart.getElementsByTagName("tr");
 
   if(rows.length > 0){
     shoppingCart.removeChild(rows[rows.length - 1]);

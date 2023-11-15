@@ -113,6 +113,22 @@ LinkedList.prototype.removeDuplicates = function (){
 
     }
   }
+
+  LinkedList.prototype.intersection = function(listHead){
+    if(!(listHead instanceof Node))
+        throw new Error("must be a node");
+    
+    let newList = new LinkedList();
+    let currentList = listHead;
+
+    while(currentList !==null){
+      if(this.isPresent(currentList.value) 
+      && !newList.isPresent(currentList.value)){
+        newList.insertAtEnd(currentList.value);
+    }
+    }
+
+  }
 }
 
 
