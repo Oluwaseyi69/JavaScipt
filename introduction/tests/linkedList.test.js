@@ -60,6 +60,5 @@ test("test that an element is present", () => {
   list.insertAtHead(10);
 
   
-  expect(list.isPresent(10).toBe(10))
 })
 

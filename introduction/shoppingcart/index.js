@@ -3,7 +3,8 @@ function createRowElements(){
     shoppingCart: document.getElementsByTagName("tbody")[0],
     newRow: document.createElement("tr"),
     newItem: document.createElement("td"),
-    itemPrice: document.createElement("td")
+    itemPrice: document.createElement("td"),
+    removeButton: document.createElement("button")
   }
 }
 function getUserInput(){
@@ -19,16 +20,26 @@ function addToCart(){
   let {item, price} =  getUserInput();
 
   if(item.value !== "" && price.value !== ""){
-    let {newRow, shoppingCart, newItem, itemPrice} = createRowElements();
+    let {newRow, shoppingCart, newItem, itemPrice, removeButton} = createRowElements();
     newItem.innerText = item.value;
     itemPrice.innerText = price.value;
 
     newRow.appendChild(newItem);
     newRow.appendChild(itemPrice);
+    // newRow.appendChild(removeButton);
     shoppingCart.appendChild(newRow);
 
     item.value = "";
     price.value = "";
   }
 
+}
+
+function removeFromCart(){
+  const shoppingCart = document.getElementsByTagName("tbody")[0];
+  const rows = shoppingCart.getElementsByTagName("tr");
+
+  if(rows.length > 0){
+    shoppingCart.removeChild(rows[rows.length - 1]);
+  }
 }

@@ -1,20 +1,41 @@
 body{
   background-color: yellow;
-  margin-left: 15px;
+  margin-left: 30px;
 }
 
 table, button{
   text-align: left;
-}
+  text-transform: capitalize;
 
-button{
-  cursor: pointer;
-  border: 1px solid;
 }
+/* 
+button{
+  text-align: capitalize;
+  cursor: pointer;
+  border: 2px solid;
+} */
 
 input {
-  width: 55px;
+  width: 35px;
 }
+
+.trr {
+  display: flex;
+  gap: 30px;
+  margin: 0px 0px;
+  align-self: left;
+}
+
+
+th {
+}
+
+tr {
+  gap: 300px;
+  margin-left: 300px;
+
+}
+
 
 input::-webkit-inner-spin-button,
 input::-webkit-outer-spin-button{
