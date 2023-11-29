@@ -74,6 +74,44 @@ class LinkedList{
       return count;
     }
 
+    this.returnNumber = (n) =>{
+      if(this.head !==null){
+        let count = 0;
+        let element = this.head;
+        while(element !== null){
+          count--;
+          element = element.nextElement;
+        }
+        let counted = count - n
+        return counted.valueOf ;
+      }
+    }
+
+    this.palindrome = () =>{
+      if(this.head!== null){
+       let count = "";
+       let reverseCount = "";
+       while (element !== null) {
+
+        count+= element.value;
+        element = element.nextElement;
+
+        for(let i = 0; i < count.length - 1; count--){
+          reverseCount += i;
+        }
+       }
+       if (count === reverseCount){
+        return true
+       }
+       else(count !== reverseCount)
+        return false;
+       
+
+      }
+    }
+
+  
+
     this.unique = () =>{
       let element = this.head;
       if(element === element.nextElement){
@@ -81,9 +119,10 @@ class LinkedList{
       }
       return element.nextElement;
     }
-  }
+  
   
   }
+}
 }
 
 LinkedList.prototype.isEmpty = function(){
@@ -129,7 +168,7 @@ LinkedList.prototype.removeDuplicates = function (){
     }
 
   }
-}
 
+}
 
 module.exports = LinkedList;

@@ -58,7 +58,16 @@ test("test that an element is present", () => {
   list.insertAtHead(40);
   list.insertAtHead(90);
   list.insertAtHead(10);
+})
 
-  
+test("test to check palindrome", ()=>{
+  let list = new LinkedList();
+  list.insertAtHead(1);
+  list.insertAtHead(2);
+  list.insertAtHead(2);
+  list.insertAtHead(1);
+
+  expect(list.palindrome()).toBe(true);
+
 })
 
